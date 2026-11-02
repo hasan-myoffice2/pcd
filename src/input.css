@@ -3,7 +3,8 @@
 
 @theme {
    /* Font Text */
-   --text-headerFS: 55px;
+   --text-headerFS: 48px;
+   --text-mobileheaderFS: 28px;
    --text-navFS: 18px;
    --text-peraFS: 16px;
    --text-primaryFS: 40px;

@@ -14,27 +14,112 @@
 
 <body class="bg-bgColor">
    <!-- Navbar Section -->
-   <header class="border-b border-borderColor pb-2 py-4 px-4 lg:px-0">
+   <header class="absolute top-0 left-0 w-full z-30 border-b border-borderColor py-4 px-4 lg:px-0">
       <nav class="max-w-7xl mx-auto flex items-center justify-between">
          <img class="lg:w-70 w-50" src="./image/brandLogo.png" alt="brandLogo">
          <ul class="lg:flex items-center gap-10 text-navFS uppercase font-medium text-secondColor hidden">
-            <li class="hover:text-primaryColor transition-all duration-150"><a href="">Home</a></li>
-            <li class="hover:text-primaryColor transition-all duration-150"><a href="">Service</a></li>
-            <li class="hover:text-primaryColor transition-all duration-150"><a href="">ABOUT</a></li>
-            <li class="hover:text-primaryColor transition-all duration-150"><a href="">CONTACT</a></li>
+            <li class="hover:text-primaryColor transition-all duration-300"><a href="">Home</a></li>
+            <li class="hover:text-primaryColor transition-all duration-300"><a href="">Service</a></li>
+            <li class="hover:text-primaryColor transition-all duration-300"><a href="">About</a></li>
+            <li class="hover:text-primaryColor transition-all duration-300"><a href="">Contact</a></li>
          </ul>
+
          <div class="lg:flex items-center gap-4 hidden">
-            <span class="w-10 h-10 rounded-full text-btnFS flex items-center justify-center
-                bg-primaryColor text-secondColor"><i class="bi bi-sun"></i></span>
-            <button class="bg-primaryColor border border-primaryColor hover:bg-transparent hover:text-primaryColor transition-all
-             duration-300 px-6 py-2 uppercase rounded-full text-btnFS text-secondColor font-medium">Free Quote</button>
+            <span
+               class="w-10 h-10 rounded-full text-btnFS flex items-center justify-center bg-primaryColor text-secondColor">
+               <i class="bi bi-sun"></i>
+            </span>
+
+            <button
+               class="bg-primaryColor border border-primaryColor hover:bg-transparent hover:text-primaryColor transition-all duration-300 px-6 py-2 uppercase rounded-full text-btnFS text-secondColor font-medium">
+               Free Quote
+            </button>
          </div>
+
          <div class="lg:hidden">
-            <span class="text-secondColor text-2xl"><i class="fa-solid fa-bars"></i></span>
+            <span class="text-secondColor text-2xl">
+               <i class="fa-solid fa-bars"></i>
+            </span>
          </div>
       </nav>
    </header>
    <!-- Navbar End -->
+
+   <!-- Hero Section -->
+   <section class="relative min-h-screen flex items-center overflow-hidden font-Poppins">
+      <!-- Background Image -->
+      <img class="absolute inset-0 w-full h-full object-cover object-center" src="./image/Hero dection Banner (1).png"
+         alt="Hero Background">
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/75"></div>
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-7xl mx-auto w-full px-5 lg:px-0 py-32 font-Poppins">
+         <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+            <!-- Left Content -->
+            <div class="text-white max-w-xl">
+               <span class="text-[14px] uppercase tracking-[3px] font-medium">
+                  Web Development Agency
+               </span>
+               <h1 class="text-mobileheaderFS tracking-wider lg:tracking-normal lg:leading-14 mb-6
+                   lg:text-headerFS font-bold mt-3"> Web Development helps for
+                  <span class="text-primaryColor">your business</span>
+               </h1>
+               <p class="text-peraFS text-secondColor leading-7 lg:mt-10">
+                  We provide end-to-end web development, UI/UX design, SEO,
+                  and digital solutions that help businesses improve visibility,
+                  increase conversions, and accelerate long-term growth.
+               </p>
+               <a href="#services"
+                  class="inline-flex mt-8 items-center justify-center bg-primaryColor hover:bg-white hover:text-primaryColor transition-all duration-300 rounded-full px-7 py-3 text-sm font-medium">
+                  Explore Our Services
+               </a>
+               <!-- Contact Information -->
+               <div class="lg:mt-16 mt-14 space-y-3">
+                  <a href="tel:+0881645645246"
+                     class="flex items-center gap-3 text-sm hover:text-primaryColor transition-all">
+                     <i class="fa-solid fa-phone"></i>
+                     <span>+088 1645645246</span>
+                  </a>
+                  <a href="mailto:PlanCodeDeploy@gmail.com"
+                     class="flex items-center gap-3 text-sm hover:text-primaryColor transition-all">
+                     <i class="fa-regular fa-envelope"></i>
+                     <span>plancodedeploy@gmail.com</span>
+                  </a>
+               </div>
+            </div>
+
+            <!-- Right Floating Cards -->
+            <div class="relative w-full max-w-[320px] h-70 mx-auto mt-8 lg:mt-0 lg:block hidden me-0">
+               <!-- Card 1 -->
+               <div class="absolute flex items-center justify-center top-0 left-1/2 -translate-x-1/2 
+               w-36 h-36 rounded-xl border border-primaryColor bg-white/5 backdrop-blur-smflex
+                 justify-centertext-4xl">
+                  <img class="w-16" src="./image/mingcute_ai-line.png" alt="mingcuteImage">
+               </div>
+               <!-- Card 2 -->
+               <div class="absolute -left-6 top-46 -translate-y-1/2 w-36 h-36 rounded-xl border
+                border-primaryColor flex items-center justify-center text-4xl">
+                  <img class="w-16" src="./image/fluent_design-ideas-32-filled.png" alt="fluentDesign">
+               </div>
+               <!-- Card 3 -->
+               <div class="absolute left-37 -bottom-9 w-36 h-36 rounded-xl border border-primaryColor
+                  flex items-center justify-center text-4xl">
+                  <img class="w-12" src="./image/streamline-ultimate_coding-apps-website-apps-browser-bold.png"
+                     alt="fluentDesign">
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Scroll Icon -->
+      <div class="absolute bottom-6 right-6 lg:right-12 z-10">
+         <a href="#services"
+            class="w-9 h-9 border border-borderColor rounded-full flex items-center justify-center text-white hover:bg-primaryColor transition-all">
+            <i class="bi bi-mouse"></i>
+         </a>
+      </div>
+   </section>
+   <!-- Hero End -->
 </body>
 
 </html>
