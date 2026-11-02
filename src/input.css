@@ -10,8 +10,10 @@
    --text-primaryFS: 40px;
    --text-secoFS: 96px;
    --text-btnFS: 18px;
+   --text-bigFS: 70px;
    /* Color */
    --color-primaryColor: #1A73E8;
+   --color-brandColor: #F1F3F4;
    --color-bgColor: #1B1E24;
    --color-peraColor: #EBECF0;
    --color-borderColor: #676B6F;
