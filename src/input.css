@@ -4,13 +4,16 @@
 @theme {
    /* Font Text */
    --text-headerFS: 55px;
+   --text-navFS: 18px;
    --text-peraFS: 16px;
    --text-primaryFS: 40px;
    --text-secoFS: 96px;
    --text-btnFS: 18px;
    /* Color */
    --color-primaryColor: #1A73E8;
+   --color-bgColor: #1B1E24;
    --color-peraColor: #EBECF0;
+   --color-borderColor: #676B6F;
    --color-secondColor: #fff;
    --font-Poppins: "Poppins", sans-serif;
 }

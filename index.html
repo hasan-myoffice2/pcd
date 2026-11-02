@@ -6,10 +6,35 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>PlanCodeDeoploy</title>
    <link rel="stylesheet" href="./src/output.css">
+   <!-- FontAwesome Icon CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+   <!-- Bootstrap Icon CDN -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
 </head>
 
-<body>
-
+<body class="bg-bgColor">
+   <!-- Navbar Section -->
+   <header class="border-b border-borderColor pb-2 py-4 px-4 lg:px-0">
+      <nav class="max-w-7xl mx-auto flex items-center justify-between">
+         <img class="lg:w-70 w-50" src="./image/brandLogo.png" alt="brandLogo">
+         <ul class="lg:flex items-center gap-10 text-navFS uppercase font-medium text-secondColor hidden">
+            <li class="hover:text-primaryColor transition-all duration-150"><a href="">Home</a></li>
+            <li class="hover:text-primaryColor transition-all duration-150"><a href="">Service</a></li>
+            <li class="hover:text-primaryColor transition-all duration-150"><a href="">ABOUT</a></li>
+            <li class="hover:text-primaryColor transition-all duration-150"><a href="">CONTACT</a></li>
+         </ul>
+         <div class="lg:flex items-center gap-4 hidden">
+            <span class="w-10 h-10 rounded-full text-btnFS flex items-center justify-center
+                bg-primaryColor text-secondColor"><i class="bi bi-sun"></i></span>
+            <button class="bg-primaryColor border border-primaryColor hover:bg-transparent hover:text-primaryColor transition-all
+             duration-300 px-6 py-2 uppercase rounded-full text-btnFS text-secondColor font-medium">Free Quote</button>
+         </div>
+         <div class="lg:hidden">
+            <span class="text-secondColor text-2xl"><i class="fa-solid fa-bars"></i></span>
+         </div>
+      </nav>
+   </header>
+   <!-- Navbar End -->
 </body>
 
 </html>
