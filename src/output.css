@@ -1724,6 +1724,9 @@
     .hover\:bg-white:hover {
       background-color: var(--color-white);
     }
+    .hover\:text-BlackColor:hover {
+      color: var(--color-BlackColor);
+    }
     .hover\:text-black:hover {
       color: var(--color-black);
     }

@@ -311,6 +311,119 @@
    </section>
    <!-- Our Working End -->
 
+   <!-- Testimonials Section -->
+   <section class=" bg-white text-BlackColor py-20 px-4 font-Poppins">
+      <div class="max-w-7xl mx-auto">
+
+         <!-- Top Header Area -->
+         <div class="max-w-3xl mb-12">
+            <p class="text-peraFS font-medium tracking-[5px] text-primaryColor uppercase mb-5">
+               Testimonials
+            </p>
+            <h2 class="lg:text-primaryFS text-mobileheaderFS font-semibold leading-tight">
+               Businesses trust us to deliver measurable digital results
+            </h2>
+            <p class="text-BlackColor text-peraFS leading-relaxed mt-8">
+               From startups to established companies, our clients rely on PlanCodeDeploy <br> to create reliable,
+               modern, and high-performing websites that support long- <br> term business
+               success and customer growth.
+            </p>
+         </div>
+
+         <!-- Bottom Content Grid -->
+         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pt-8">
+
+            <!-- Rating Stats -->
+            <div class="md:col-span-4 flex flex-col justify-center">
+               <h1 class="text-[60px] sm:text-bigFS font-bold leading-none mb-8">
+                  4.7<span class="text-secondColor">/5</span>
+               </h1>
+
+               <!-- Star Icons -->
+               <div class="flex items-center space-x-2 text-primaryColor text-peraFS mb-3">
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+                  <span><i class="fa-solid fa-star"></i></span>
+               </div>
+
+               <p class="text-BlackColor text-sm leading-relaxed max-w-xs opacity-95">
+                  Trusted by businesses across the USA, UK, and Europe for quality web development services.
+               </p>
+            </div>
+
+            <!-- Swiper Carousel -->
+            <div class="md:col-span-8 relative pl-0 md:pl-8 md:border-l border-primaryColor">
+
+               <!-- Swiper Container -->
+               <div class="swiper testimonials-slider">
+                  <div class="swiper-wrapper">
+
+                     <!-- Slide 1 -->
+                     <div class="swiper-slide">
+                        <div class="space-y-6">
+                           <p class="text-BlackColor text-[15px] sm:text-peraFS leading-relaxed opacity-90">
+                              PlanCodeDeploy transformed our outdated website into a modern platform that reflects our
+                              brand perfectly. The communication was excellent, deadlines were met, and the final
+                              product exceeded expectations.
+                           </p>
+                           <div>
+                              <h4 class="text-BlackColor text-lg font-semibold">Hasan Ali</h4>
+                              <p class="text-primaryColor text-sm font-medium mt-1">Business Owner</p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Slide 2 -->
+                     <div class="swiper-slide">
+                        <div class="space-y-6">
+                           <p class="text-BlackColor text-peraFS leading-relaxed opacity-90">
+                              Working with PlanCodeDeploy was a seamless experience. Their attention to detail and clean
+                              frontend structure helped elevate our digital presence significantly.
+                           </p>
+                           <div>
+                              <h4 class="text-BlackColor text-lg font-semibold">Sainmun All Basar</h4>
+                              <p class="text-primaryColor text-sm font-medium mt-1">Product Manager</p>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Slide 3 -->
+                     <div class="swiper-slide">
+                        <div class="space-y-6">
+                           <p class="text-BlackColor text-peraFS leading-relaxed opacity-90">
+                              Reliable, fast, and highly professional. They delivered exactly what we needed on time and
+                              with exceptional visual polish.
+                           </p>
+                           <div>
+                              <h4 class="text-BlackColor text-lg font-semibold">Hasinur HR</h4>
+                              <p class="text-primaryColor text-sm font-medium mt-1">Tech Founder</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Custom Navigation Arrows -->
+               <div class="flex items-center justify-end space-x-4 mt-6 md:mt-8">
+                  <button class="swiper-button-prev-custom text-primaryColor transition-colors duration-200">
+                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                     </svg>
+                  </button>
+                  <button class="swiper-button-next-custom text-primaryColor transition-colors duration-200">
+                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                     </svg>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Testimonials Section End -->
+
    <!-- cta Section -->
    <section class="relative isolate py-20 lg:py-40 overflow-hidden font-Poppins px-4 lg:px-0">
 
@@ -481,37 +594,55 @@
 
    </script>
 
+   <!-- testimonials Script -->
+   <script>
+      document.addEventListener("DOMContentLoaded", function () {
+         const swiper = new Swiper('.testimonials-slider', {
+            loop: true,
+            spaceBetween: 30,
+            autoplay: {
+               delay: 4000,
+               disableOnInteraction: false,
+            },
+            navigation: {
+               nextEl: '.swiper-button-next-custom',
+               prevEl: '.swiper-button-prev-custom',
+            },
+         });
+      });
+   </script>
+
    <!-- Countdown Script -->
    <script>
-         (function () {
-            const counters = document.querySelectorAll('.counter');
-            const duration = 1500; // ms
+      (function () {
+         const counters = document.querySelectorAll('.counter');
+         const duration = 1500; // ms
 
-            const pad = (n) => String(n).padStart(2, '0');
+         const pad = (n) => String(n).padStart(2, '0');
 
-            const animate = (el) => {
-               const target = Number(el.dataset.target);
-               const start = performance.now();
+         const animate = (el) => {
+            const target = Number(el.dataset.target);
+            const start = performance.now();
 
-               const tick = (now) => {
-                  const progress = Math.min((now - start) / duration, 1);
-                  el.textContent = pad(Math.round(target * progress));
-                  if (progress < 1) requestAnimationFrame(tick);
-               };
-               requestAnimationFrame(tick);
+            const tick = (now) => {
+               const progress = Math.min((now - start) / duration, 1);
+               el.textContent = pad(Math.round(target * progress));
+               if (progress < 1) requestAnimationFrame(tick);
             };
+            requestAnimationFrame(tick);
+         };
 
-            const observer = new IntersectionObserver((entries, obs) => {
-               entries.forEach((entry) => {
-                  if (entry.isIntersecting) {
-                     animate(entry.target);
-                     obs.unobserve(entry.target);
-                  }
-               });
-            }, { threshold: 0.5 });
+         const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach((entry) => {
+               if (entry.isIntersecting) {
+                  animate(entry.target);
+                  obs.unobserve(entry.target);
+               }
+            });
+         }, { threshold: 0.5 });
 
-            counters.forEach((el) => observer.observe(el));
-         })();
+         counters.forEach((el) => observer.observe(el));
+      })();
    </script>
 
    <script>
