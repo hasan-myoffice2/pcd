@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>PlanCodeDeoploy</title>
    <link rel="icon" type="image/png" href="./image/favicon.png">
-   <link rel="stylesheet" href="./src/output.css?v=1.0.0">
+   <link rel="stylesheet" href="./src/output.css?v=1.0.1">
    <!-- Swipper JS CDN Link -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
    <!-- FontAwesome Icon CDN -->
@@ -22,6 +22,13 @@
 </head>
 
 <body class="bg-bodyBgColor">
+   <!-- Mouse Effect Start -->
+   <div class="fixed customCursor pointer-events-none left-0 top-0 z-9999 lg:flex hidden h-10 w-10 -translate-x-1/2
+       -translate-y-1/2 items-center justify-center rounded-full border-2 border-primaryColor">
+      <!-- <div class="h-3 w-3 rounded-full"></div> -->
+   </div>
+   <!-- Mouse Effect End -->
+
    <!-- Navbar Section -->
    <header class="absolute top-0 left-0 w-full z-30 border-b border-borderColor py-4 px-4 lg:px-0">
       <nav class="max-w-7xl mx-auto flex items-center justify-between">
@@ -166,6 +173,7 @@
          <!-- Right: Form -->
          <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
             <input type="hidden" name="access_key" value="5a7765ad-fe7f-4d31-b5c2-ff6d71aa64b0">
+            <input type="hidden" name="access_key" value="f7998665-97a6-42b3-b845-324305d5171a">
 
             <div>
                <label for="name" class="mb-2 block text-peraFS text-black">Full Name*</label>
@@ -237,6 +245,37 @@
       </div>
    </section>
    <!-- cta Section End -->
+
+   <!-- CustomCursor -->
+   <script>
+      const cursor = document.querySelector('.customCursor');
+      // mouse position
+      let mouseX = 0;
+      let mouseY = 0;
+
+      // cursor position
+      let cursorX = 0;
+      let cursorY = 0;
+
+      // mouse moveing
+      document.addEventListener('mousemove', (e) => {
+         mouseX = e.clientX;
+         mouseY = e.clientY;
+      })
+
+      // cursorAnimate Function
+      function cursorAnimate() {
+         cursorX += (mouseX - cursorX) * 0.16;
+         cursorY += (mouseY - cursorY) * 0.16;
+
+         cursor.style.left = cursorX + 'px';
+         cursor.style.top = cursorY + 'px';
+
+         requestAnimationFrame(cursorAnimate)
+      }
+      cursorAnimate()
+
+   </script>
 
    <!-- Footer Section Start -->
    <footer class="bg-fooBgColor font-Poppins text-peraColor lg:py-20 py-10 px-4 lg:px-0">
