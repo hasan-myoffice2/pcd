@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>PlanCodeDeoploy</title>
    <link rel="icon" type="image/png" href="./image/favicon.png">
-   <link rel="stylesheet" href="./src/output.css">
+   <link rel="stylesheet" href="./src/output.css?v=1.0.0">
    <!-- Swipper JS CDN Link -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
    <!-- FontAwesome Icon CDN -->
@@ -164,7 +164,8 @@
          </div>
 
          <!-- Right: Form -->
-         <form action="#" method="post" class="space-y-5">
+         <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+            <input type="hidden" name="access_key" value="5a7765ad-fe7f-4d31-b5c2-ff6d71aa64b0">
 
             <div>
                <label for="name" class="mb-2 block text-peraFS text-black">Full Name*</label>
