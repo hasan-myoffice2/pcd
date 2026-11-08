@@ -158,6 +158,56 @@
    </section>
    <!-- About Company End -->
 
+   <!-- Coundown Section -->
+   <section class="bg-secondColor py-20 sm:py-20 font-Poppins">
+      <div class="mx-auto max-w-6xl px-6">
+         <div class="grid grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-4 lg:gap-x-10">
+            <!-- Stat 1 -->
+            <div class="text-center sm:text-left">
+               <div class="flex items-start justify-center sm:justify-start">
+                  <span class="counter text-6xl font-semibold leading-none text-black lg:text-bigFS"
+                     data-target="7">00</span>
+               </div>
+               <p class="mt-4 text-peraFS font-medium text-BlackColor">Running Projects</p>
+            </div>
+            <!-- Stat 2 -->
+            <div class="text-center sm:text-left">
+               <div class="flex items-start justify-center sm:justify-start">
+                  <span class="counter text-6xl font-semibold leading-none text-black lg:text-bigFS"
+                     data-target="37">00</span>
+                  <span class="ml-1 text-3xl font-medium leading-none text-blue-500">+</span>
+               </div>
+               <p class="mt-4 text-peraFS font-medium text-BlackColor">
+                  Projects Successfully<br class="hidden sm:block" /> Delivered
+               </p>
+            </div>
+            <!-- Stat 3 -->
+            <div class="text-center sm:text-left">
+               <div class="flex items-start justify-center sm:justify-start">
+                  <span class="counter text-6xl font-semibold leading-none text-black lg:text-bigFS"
+                     data-target="9">00</span>
+                  <span class="ml-1 text-3xl font-medium leading-none text-blue-500">+</span>
+               </div>
+               <p class="mt-4 text-peraFS font-medium text-BlackColor">
+                  Years of Industry<br class="hidden sm:block" /> Experience
+               </p>
+            </div>
+            <!-- Stat 4 -->
+            <div class="text-center sm:text-left">
+               <div class="flex items-start justify-center sm:justify-start">
+                  <span class="counter text-6xl font-semibold leading-none text-black lg:text-bigFS"
+                     data-target="12">00</span>
+                  <span class="ml-1 text-3xl font-medium leading-none text-primaryColor">+</span>
+               </div>
+               <p class="mt-4 text-peraFS font-medium text-BlackColor">
+                  Businesses<br class="hidden sm:block" /> Worldwide Served
+               </p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Coundown Section End -->
+
    <!-- cta Section -->
    <section class="relative isolate py-20 lg:py-40 overflow-hidden font-Poppins px-4 lg:px-0">
 
@@ -326,6 +376,39 @@
       }
       cursorAnimate()
 
+   </script>
+
+   <!-- Countdown Script -->
+   <script>
+         (function () {
+            const counters = document.querySelectorAll('.counter');
+            const duration = 1500; // ms
+
+            const pad = (n) => String(n).padStart(2, '0');
+
+            const animate = (el) => {
+               const target = Number(el.dataset.target);
+               const start = performance.now();
+
+               const tick = (now) => {
+                  const progress = Math.min((now - start) / duration, 1);
+                  el.textContent = pad(Math.round(target * progress));
+                  if (progress < 1) requestAnimationFrame(tick);
+               };
+               requestAnimationFrame(tick);
+            };
+
+            const observer = new IntersectionObserver((entries, obs) => {
+               entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                     animate(entry.target);
+                     obs.unobserve(entry.target);
+                  }
+               });
+            }, { threshold: 0.5 });
+
+            counters.forEach((el) => observer.observe(el));
+         })();
    </script>
 
 </body>
