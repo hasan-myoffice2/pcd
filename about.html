@@ -214,6 +214,103 @@
    </section>
    <!-- Coundown Section End -->
 
+   <!-- Our Working Section -->
+   <section class="bg-bodyBgColor py-20 font-Poppins px-4 lg:px-0">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+         <!-- Heading -->
+         <div class="text-center max-w-xl mx-auto mb-14 lg:mb-20">
+            <h2 class="text-2xl lg:text-primaryFS font-bold text-black">Our Working Process</h2>
+            <p class="mt-4 text-peraFS text-neutral-700 leading-relaxed">
+               A structured development process that ensures every project is delivered on time,
+               within budget, and to the highest quality standards.
+            </p>
+         </div>
+
+         <!-- Steps -->
+         <div id="process" class="relative">
+            <!-- Line: grey track + blue animated fill -->
+            <div id="line-track" class="absolute top-0 left-4 lg:left-1/2 w-0.5 -translate-x-1/2 bg-white"></div>
+            <div id="line-fill" class="absolute top-0 left-4 lg:left-1/2 w-0.5 h-0 -translate-x-1/2 bg-primaryColor">
+            </div>
+            <!-- 01 -->
+            <div class="step relative pl-12 lg:pl-0 lg:grid lg:grid-cols-2 mb-12 lg:mb-20">
+               <div class="lg:pr-20 lg:justify-self-end max-w-md">
+                  <h3 class="text-4xl lg:text-bigFS font-extrabold text-neutral-700">01</h3>
+                  <h4 class="mt-3 text-mobileheaderFS font-Montserrat font-bold text-black">Discovery &amp;
+                     Consultation
+                  </h4>
+                  <p class="mt-3 text-peraFS text-neutral-700 leading-7">
+                     We begin by understanding your business, objectives, target audience,
+                     and technical requirements to build a clear project roadmap.
+                  </p>
+               </div>
+            </div>
+
+            <!-- 02 -->
+            <div class="step relative pl-12 lg:pl-0 lg:grid lg:grid-cols-2 mb-12 lg:mb-20 lg:-mt-50">
+               <div class="lg:col-start-2 lg:pl-20 max-w-md">
+                  <h3 class="text-4xl lg:text-bigFS font-extrabold text-neutral-700">02</h3>
+                  <h4 class="mt-3 text-mobileheaderFS font-Montserrat font-bold text-black">Strategy &amp; Planning
+                  </h4>
+                  <p class="mt-3 text-peraFS text-neutral-700 leading-7">
+                     Our team defines the website architecture, user journey, technology stack,
+                     and development strategy to ensure scalability and future growth.
+                  </p>
+               </div>
+            </div>
+
+            <!-- 03 -->
+            <div class="step relative pl-12 lg:pl-0 lg:grid lg:grid-cols-2 mb-12 lg:mb-20">
+               <div class="lg:pr-20 lg:justify-self-end max-w-md">
+                  <h3 class="text-4xl lg:text-bigFS font-extrabold text-neutral-700">03</h3>
+                  <h4 class="mt-3 text-mobileheaderFS font-Montserrat font-bold text-black">UI/UX Design
+                  </h4>
+                  <p class="mt-3 text-peraFS text-neutral-700 leading-7">
+                     We create engaging interfaces and intuitive user experiences that reflect
+                     your brand while improving usability and customer engagement.
+                  </p>
+               </div>
+            </div>
+
+            <!-- 04 -->
+            <div class="step relative pl-12 lg:pl-0 lg:grid lg:grid-cols-2 mb-12 lg:mb-20 lg:-mt-40">
+               <div class="lg:col-start-2 lg:pl-20 max-w-md">
+                  <h3 class="text-4xl lg:text-bigFS font-extrabold text-neutral-700">04</h3>
+                  <h4 class="mt-3 text-mobileheaderFS font-Montserrat font-bold text-black">
+                     <h4 class="mt-3 text-mobileheaderFS font-Montserrat font-bold text-black">Discovery &amp;
+                        Consultation
+                     </h4>
+                  </h4>
+                  <p class="mt-3 text-peraFS text-neutral-700 leading-7">
+                     Our developers build clean, secure, and responsive websites while performing
+                     continuous testing for performance, compatibility, and security.
+                  </p>
+               </div>
+            </div>
+
+            <!-- 05 -->
+            <div class="step relative pl-12 lg:pl-0 pt-2 lg:pt-10">
+               <span
+                  class="dot absolute left-4 lg:left-1/2 top-4 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-white border-2 border-white transition-all duration-500"></span>
+               <div class="lg:text-center max-w-lg mx-0 lg:mx-auto">
+                  <h3 class="text-4xl lg:text-bigFS font-extrabold text-neutral-700">05</h3>
+                  <h4 class="mt-3 text-mobileheaderFS font-Montserrat font-bold text-black">
+                     <h4 class="mt-3 text-mobileheaderFS font-Montserrat font-bold text-black">Launch & Ongoing Support
+                     </h4>
+                  </h4>
+                  <p class="mt-3 text-peraFS text-neutral-700 leading-7">
+                     After deployment, we provide continuous maintenance, updates, optimization,
+                     and technical support to keep your website performing at its best.
+                  </p>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </section>
+   <!-- Our Working End -->
+
    <!-- cta Section -->
    <section class="relative isolate py-20 lg:py-40 overflow-hidden font-Poppins px-4 lg:px-0">
 
@@ -415,6 +512,45 @@
 
             counters.forEach((el) => observer.observe(el));
          })();
+   </script>
+
+   <script>
+      const process = document.getElementById('process');
+      const track = document.getElementById('line-track');
+      const fill = document.getElementById('line-fill');
+      const dots = document.querySelectorAll('#process .dot');
+
+      // Line ta last dot porjonto thakbe
+      function setTrackHeight() {
+         const box = process.getBoundingClientRect();
+         const last = dots[dots.length - 1].getBoundingClientRect();
+         const total = last.top - box.top + last.height / 2;
+         track.style.height = total + 'px';
+         return total;
+      }
+
+      // Scroll korle blue line niche nambe, dot gulo blue hobe
+      function updateLine() {
+         const total = setTrackHeight();
+         const box = process.getBoundingClientRect();
+         const progress = Math.min(Math.max(window.innerHeight * 0.6 - box.top, 0), total);
+         fill.style.height = progress + 'px';
+
+         dots.forEach((dot) => {
+            const d = dot.getBoundingClientRect();
+            const center = d.top - box.top + d.height / 2;
+            const active = center <= progress;
+            dot.classList.toggle('bg-blue-600', active);
+            dot.classList.toggle('border-blue-600', active);
+            dot.classList.toggle('scale-125', active);
+            dot.classList.toggle('bg-white', !active);
+            dot.classList.toggle('border-white', !active);
+         });
+      }
+
+      window.addEventListener('scroll', updateLine);
+      window.addEventListener('resize', updateLine);
+      updateLine();
    </script>
 
 </body>
