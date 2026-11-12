@@ -38,7 +38,8 @@
    <!-- Mouse Effect End -->
 
    <!-- Navbar Section -->
-   <header class="absolute top-0 left-0 w-full z-30 border-b border-borderColor py-4 px-4 lg:px-0">
+   <header
+      class="fixed overflow-hidden bg-bgColor top-0 left-0 w-full z-30 border-b border-borderColor py-4 px-4 lg:px-0">
       <nav class="max-w-7xl mx-auto flex items-center justify-between">
          <img class="lg:w-70 w-50" src="./image/brandLogo.png" alt="brandLogo">
          <ul class="hidden lg:flex items-center gap-10 text-navFS uppercase font-medium text-secondColor">
@@ -88,9 +89,9 @@
    <!-- Hero Section -->
    <section class="relative min-h-screen flex items-center overflow-hidden font-Poppins">
       <!-- Background Image -->
-      <!-- <img class="absolute inset-0 w-full h-full object-cover object-center" src="" alt="Hero Background"> -->
+      <img class="absolute w-200 right-0 bottom-0 object-cover" src="./image/newHero.png" alt="Hero Background">
       <!-- Dark Overlay -->
-      <!-- <div class="absolute inset-0 bg-black/75"></div> -->
+      <div class="absolute inset-0 bg-black/50"></div>
       <!-- Hero Content -->
       <div class="relative z-10 max-w-7xl mx-auto w-full px-5 lg:px-0 py-32 font-Poppins">
          <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
@@ -1014,48 +1015,55 @@
 
    </script>
 
+   <!-- Count Script -->
    <script>
-      const counters = document.querySelectorAll(".count1 h2, .count2 h2, .count3 h2");
-
+      const counters = document.querySelectorAll(
+         ".count1 h2, .count2 h2, .count3 h2"
+      );
       const observer = new IntersectionObserver((entries) => {
          entries.forEach((entry) => {
-
             const counter = entry.target;
-
             if (entry.isIntersecting) {
-
-               const target = Number(counter.dataset.target || counter.innerText);
-               let count = 0;
-
-               counter.dataset.target = target;
-               counter.innerText = "00";
-
+               const target = Number(counter.dataset.target);
                const duration = 2000;
                const startTime = performance.now();
-
+               // আগের animation বন্ধ
+               if (counter.animationFrame) {
+                  cancelAnimationFrame(counter.animationFrame);
+               }
+               counter.innerText = "00";
                function updateCounter(currentTime) {
-                  const progress = Math.min((currentTime - startTime) / duration, 1);
-
-                  count = Math.ceil(progress * target);
-
-                  counter.innerText = count.toString().padStart(2, "0");
-
+                  const progress = Math.min(
+                     (currentTime - startTime) / duration,
+                     1
+                  );
+                  const value = Math.floor(progress * target);
+                  counter.innerText = value.toString().padStart(2, "0");
                   if (progress < 1) {
-                     requestAnimationFrame(updateCounter);
+                     counter.animationFrame = requestAnimationFrame(updateCounter);
+                  } else {
+                     counter.innerText = target.toString().padStart(2, "0");
+                     counter.animationFrame = null;
                   }
                }
-
-               requestAnimationFrame(updateCounter);
+               counter.animationFrame = requestAnimationFrame(updateCounter);
             } else {
+
+               // Section থেকে বের হলে animation বন্ধ
+               if (counter.animationFrame) {
+                  cancelAnimationFrame(counter.animationFrame);
+                  counter.animationFrame = null;
+               }
                counter.innerText = "00";
             }
-
          });
       }, {
          threshold: 0.5
       });
 
       counters.forEach((counter) => {
+         counter.dataset.target = counter.innerText;
+         counter.innerText = "00";
          observer.observe(counter);
       });
    </script>
