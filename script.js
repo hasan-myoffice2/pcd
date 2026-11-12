@@ -40,8 +40,32 @@ tl.from("#heroTitle", {
    opacity: 0.1
 })
 
-gsap.from(".", {
-   y: 500,
+gsap.from(".company .trigger1", {
+   y: 150,
    duration: 1,
+   opacity: 0,
+   scrollTrigger: {
+      trigger: ".company .trigger1",
+      start: "top 80%"
+   }
 })
-
+gsap.from(".company .trigger2", {
+   y: 150,
+   duration: 1,
+   delay: 0.5,
+   opacity: 0,
+   scrollTrigger: {
+      trigger: ".company .trigger1",
+      start: "top 80%"
+   }
+})
+gsap.from(".company .trigger3", {
+   y: 150,
+   duration: 1,
+   delay: 1,
+   opacity: 0,
+   scrollTrigger: {
+      trigger: ".company .trigger1",
+      start: "top 80%"
+   }
+})

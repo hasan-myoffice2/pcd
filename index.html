@@ -165,33 +165,33 @@
    <!-- Our Company Section -->
    <section class="p-4 py-20 font-Poppins">
       <div>
-         <div class="lg:text-center">
-            <span class="text-primaryColor uppercase tracking-[6px] font-medium">About Company</span>
-            <h2 class="lg:text-primaryFS text-mobileheaderFS lg:leading-12 mt-5 mb-8 max-w-2xl mx-auto
-                text-brandColor"> We create modern websites and scalable digital solutions</h2>
-            <p class="max-w-4xl mx-auto leading-7.5 text-peraColor">Your website is more than an online presence—it
-               is your most valuable digital
+         <div class="lg:text-center company">
+            <div class="text-primaryColor uppercase tracking-[6px] font-medium trigger1">About Company</div>
+            <h2 class="lg:text-primaryFS trigger text-mobileheaderFS lg:leading-12 mt-5 mb-8 max-w-2xl mx-auto
+                text-brandColor trigger2"> We create modern websites and scalable digital solutions</h2>
+            <p class="max-w-4xl trigger3 mx-auto leading-7.5 text-peraColor">Your website is more than an online
+               presence—it is your most valuable digital
                asset. At PlanCodeDeploy, we build custom websites, business platforms, and web applications that
                combine exceptional design with reliable technology. Every project is developed with performance,
                security, scalability, and long-term business growth in mind, helping companies establish a
                stronger digital presence and deliver better customer experiences.</p>
          </div>
          <div class="grid grid-cols-1 lg:grid-cols-3 mx-auto max-w-7xl mt-15 gap-10 text-brandColor">
-            <div class="flex items-center justify-center flex-col">
+            <div class="flex items-center justify-center flex-col count1">
                <div class="flex items-center gap-2">
                   <h2 class="lg:text-bigFS text-primaryFS font-medium">37</h2>
                   <span class="lg:-mt-8 -mt-3 text-3xl text-primaryColor">+</span>
                </div>
                <p class="lg:text-[20px] text-peraFS max-w-70 text-center">Projects Successfully Delivered</p>
             </div>
-            <div class="flex items-center justify-center flex-col">
+            <div class="flex items-center justify-center flex-col count2">
                <div class="flex items-center gap-2">
                   <h2 class="lg:text-bigFS text-primaryFS font-medium">09</h2>
                   <span class="lg:-mt-8 -mt-3 text-3xl text-primaryColor">+</span>
                </div>
                <p class="lg:text-[20px] text-peraFS max-w-60 text-center">Years of Industry Experience</p>
             </div>
-            <div class="flex items-center justify-center flex-col">
+            <div class="flex items-center justify-center flex-col count3">
                <div class="flex items-center gap-2">
                   <h2 class="lg:text-bigFS text-primaryFS font-medium">12</h2>
                   <span class="lg:-mt-8 -mt-3 text-3xl text-primaryColor">+</span>
@@ -1014,7 +1014,46 @@
 
    </script>
 
+   <script>
+      const counters = document.querySelectorAll(".count1 h2, .count2 h2, .count3 h2");
+
+      const observer = new IntersectionObserver((entries) => {
+         entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+
+               const counter = entry.target;
+               const target = Number(counter.innerText);
+               let count = 0;
+
+               const duration = 2000;
+               const increment = target / (duration / 16);
+
+               const updateCounter = () => {
+                  count += increment;
+
+                  if (count < target) {
+                     counter.innerText = Math.ceil(count).toString().padStart(2, "0");
+                     requestAnimationFrame(updateCounter);
+                  } else {
+                     counter.innerText = target.toString().padStart(2, "0");
+                  }
+               };
+
+               updateCounter();
+               observer.unobserve(counter);
+            }
+         });
+      }, {
+         threshold: 0.5
+      });
+
+      counters.forEach((counter) => {
+         observer.observe(counter);
+      });
+   </script>
+
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/ScrollTrigger.min.js"></script>
    <script src="./script.js"></script>
 
 </body>
