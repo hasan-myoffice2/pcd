@@ -1019,29 +1019,37 @@
 
       const observer = new IntersectionObserver((entries) => {
          entries.forEach((entry) => {
+
+            const counter = entry.target;
+
             if (entry.isIntersecting) {
 
-               const counter = entry.target;
-               const target = Number(counter.innerText);
+               const target = Number(counter.dataset.target || counter.innerText);
                let count = 0;
 
+               counter.dataset.target = target;
+               counter.innerText = "00";
+
                const duration = 2000;
-               const increment = target / (duration / 16);
+               const startTime = performance.now();
 
-               const updateCounter = () => {
-                  count += increment;
+               function updateCounter(currentTime) {
+                  const progress = Math.min((currentTime - startTime) / duration, 1);
 
-                  if (count < target) {
-                     counter.innerText = Math.ceil(count).toString().padStart(2, "0");
+                  count = Math.ceil(progress * target);
+
+                  counter.innerText = count.toString().padStart(2, "0");
+
+                  if (progress < 1) {
                      requestAnimationFrame(updateCounter);
-                  } else {
-                     counter.innerText = target.toString().padStart(2, "0");
                   }
-               };
+               }
 
-               updateCounter();
-               observer.unobserve(counter);
+               requestAnimationFrame(updateCounter);
+            } else {
+               counter.innerText = "00";
             }
+
          });
       }, {
          threshold: 0.5
