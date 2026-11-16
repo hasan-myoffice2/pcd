@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>PlanCodeDeoploy</title>
    <link rel="icon" type="image/png" href="./image/favicon.png">
-   <link rel="stylesheet" href="./src/output.css?v=0.2.1">
+   <link rel="stylesheet" href="./src/output.css?v=0.1.mim">
    <!-- Swipper JS CDN Link -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
    <!-- FontAwesome Icon CDN -->
@@ -468,13 +468,14 @@
       <div class="max-w-7xl mx-auto">
          <!-- Header Section -->
          <div class="max-w-4xl mb-16">
-            <p class="text-peraFS font-medium tracking-[5px] text-primaryColor uppercase mb-3">
+            <p class="text-peraFS font-medium tracking-[5px] text-primaryColor uppercase mb-3 benifitTitle">
                why chooce us
             </p>
-            <h2 class="text-mobileheaderFS lg:text-headerFS font-semibold text-brandColor leading-tight mb-4">
+            <h2
+               class="text-mobileheaderFS lg:text-headerFS font-semibold text-brandColor leading-tight mb-4 benifitTitle">
                Built Around Your Goals. Focused on Your Growth.
             </h2>
-            <p class="text-peraColor text-peraFS leading-relaxed">
+            <p class="text-peraColor text-peraFS leading-relaxed benifitTitle">
                At Code Plan Deploy, we don't just build websites—we create digital solutions that support your business
                goals. From strategy and design to development, SEO, and ongoing support, our team focuses on delivering
                measurable value at every stage.
@@ -484,7 +485,7 @@
          <!-- Features Grid -->
          <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:gap-x-16 gap-x-10 lg:gap-y-12 gap-y-6">
             <!-- Feature 01 -->
-            <div>
+            <div class="benifit">
                <h3 class="text-secondColor text-navFS lg:text-cardFS font-semibold mb-3">
                   01 — Business-Focused Solutions
                </h3>
@@ -495,7 +496,7 @@
             </div>
 
             <!-- Feature 02 -->
-            <div>
+            <div class="benifit">
                <h3 class="text-secondColor text-navFS lg:text-cardFS font-semibold mb-3">
                   02 — Modern Technology
                </h3>
@@ -506,7 +507,7 @@
             </div>
 
             <!-- Feature 03 -->
-            <div>
+            <div class="benifit">
                <h3 class="text-secondColor text-navFS lg:text-cardFS font-semibold mb-3">
                   03 — User-Centered Design
                </h3>
@@ -517,7 +518,7 @@
             </div>
 
             <!-- Feature 04 -->
-            <div>
+            <div class="benifit">
                <h3 class="text-secondColor text-navFS lg:text-cardFS font-semibold mb-3">
                   04 — SEO-Ready Development
                </h3>
@@ -528,7 +529,7 @@
             </div>
 
             <!-- Feature 05 -->
-            <div>
+            <div class="benifit">
                <h3 class="text-secondColor text-navFS lg:text-cardFS font-semibold mb-3">
                   05 — Transparent Communication
                </h3>
@@ -539,7 +540,7 @@
             </div>
 
             <!-- Feature 06 -->
-            <div>
+            <div class="benifit">
                <h3 class="text-secondColor text-navFS lg:text-cardFS font-semibold mb-3">
                   06 — Long-Term Support
                </h3>
@@ -560,17 +561,17 @@
 
          <!-- Left Side: Heading -->
          <div class="lg:mb-20 mb-10">
-            <p class="text-peraFS font-medium tracking-[5px] text-primaryColor uppercase mb-3">
+            <p class="text-peraFS font-medium tracking-[5px] text-primaryColor uppercase mb-3 faq">
                common questions
             </p>
-            <h2
-               class="text-mobileheaderFS sm:text-[36px] lg:text-primaryFS font-semibold leading-tight text-secondColor">
-               Frequently asked questions <br class="hidden lg:block"> about our services
+            <h2 class="text-mobileheaderFS faq sm:text-[36px] lg:text-primaryFS font-semibold
+                leading-tight text-secondColor"> Frequently asked questions <br class="hidden lg:block">
+               about our services
             </h2>
          </div>
 
          <!-- Accordion -->
-         <div class="max-w-5xl mx-auto space-y-4" x-data="{ active: 1 }">
+         <div class="max-w-5xl mx-auto space-y-4 accordion" x-data="{ active: 1 }">
             <!-- Accordion Item 1 -->
             <div class="border-b border-primaryColor pb-4">
                <button @click="active = (active === 1 ? null : 1)"
@@ -678,7 +679,7 @@
 
    <!-- Our Process Section -->
    <section class="relative overflow-hidden bg-bgColor py-20 font-Poppins">
-      <div class="absolute -top-24 -right-24 pointer-events-none z-0">
+      <div class="absolute -top-24 -right-24 pointer-events-none z-0 spin">
          <div class="relative flex items-center justify-center w-80 h-80 rounded-full border border-dashed border-primaryColor/60 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))]
              from-primaryColor/50 via-slate-700/40 to-slate-900/90">
             <div class="absolute w-36 h-36 rounded-full bg-primaryColor/30 blur-2xl"></div>
@@ -691,7 +692,7 @@
       <!-- Bottom Left Decoration -->
       <div class="absolute -bottom-24 -left-24 pointer-events-none z-0">
          <div
-            class="relative flex items-center justify-center w-80 h-80 rounded-full border border-dashed border-primaryColor/60 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-primaryColor/50 via-slate-700/40 to-slate-900/90">
+            class="relative flex spin items-center justify-center w-80 h-80 rounded-full border border-dashed border-primaryColor/60 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-primaryColor/50 via-slate-700/40 to-slate-900/90">
             <div class="absolute w-36 h-36 rounded-full bg-primaryColor/30 blur-2xl"></div>
             <div class="absolute w-64 h-64 rounded-full border border-dashed border-primaryColor/60"></div>
             <div class="absolute w-48 h-48 rounded-full border border-dashed border-primaryColor/60"></div>
@@ -700,10 +701,10 @@
 
       <div class="relative mx-auto max-w-7xl px-4 sm:px-6">
          <div class="mx-auto mb-16 max-w-3xl text-center">
-            <p class="mb-3 text-peraFS font-medium tracking-[5px] text-primaryColor uppercase">
+            <p class="mb-3 text-peraFS font-medium tracking-[5px] text-primaryColor uppercase process">
                Our Process
             </p>
-            <h2 class="text-mobileheaderFS font-semibold leading-tight text-brandColor lg:text-primaryFS">
+            <h2 class="text-mobileheaderFS font-semibold leading-tight text-brandColor lg:text-primaryFS process">
                A transparent development process built around your success
             </h2>
          </div>
@@ -711,10 +712,12 @@
          <!-- Process Cards -->
          <div class="relative grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
             <!-- Connecting Line -->
-            <div class="absolute left-[12%] right-[12%] top-40.25 z-0 hidden h-px bg-borderColor lg:block"></div>
+            <div class="absolute left-[12%] right-[12%] top-40.25 z-0 hidden h-px bg-borderColor lg:block ProLine">
+            </div>
 
             <!-- Card 01 -->
-            <div class="relative rounded-xl border border-primaryColor bg-primaryColor px-4 pb-5 pt-6 text-center">
+            <div
+               class="relative proCard rounded-xl border border-primaryColor bg-primaryColor px-4 pb-5 pt-6 text-center">
                <div
                   class="mx-auto mb-8 flex h-23 w-23 rotate-45 items-center justify-center overflow-hidden rounded-xl border-2 border-white">
                   <img src="./image/Intersect.png" alt="Discovery" class="h-30 w-30 max-w-none -rotate-45 object-cover">
@@ -733,7 +736,7 @@
             </div>
 
             <!-- Card 02 -->
-            <div class="relative px-4 pb-5 pt-6 text-center">
+            <div class="relative proCard px-4 pb-5 pt-6 text-center">
                <div
                   class="mx-auto mb-8 flex h-23 w-23 rotate-45 items-center justify-center overflow-hidden rounded-xl border-2 border-primaryColor">
                   <img src="./image/Intersect.png" alt="Discovery" class="h-30 w-30 max-w-none -rotate-45 object-cover">
@@ -750,7 +753,7 @@
             </div>
 
             <!-- Card 03 -->
-            <div class="relative px-4 pb-5 pt-6 text-center">
+            <div class="relative proCard px-4 pb-5 pt-6 text-center">
                <div
                   class="mx-auto mb-8 flex h-23 w-23 rotate-45 items-center justify-center overflow-hidden rounded-xl border-2 border-primaryColor">
                   <img src="./image/Intersect.png" alt="Discovery" class="h-30 w-30 max-w-none -rotate-45 object-cover">
@@ -767,7 +770,7 @@
             </div>
 
             <!-- Card 04 -->
-            <div class="relative px-4 pb-5 pt-6 text-center">
+            <div class="relative proCard px-4 pb-5 pt-6 text-center">
                <div
                   class="mx-auto mb-8 flex h-23 w-23 rotate-45 items-center justify-center overflow-hidden rounded-xl border-2 border-primaryColor">
                   <img src="./image/Intersect.png" alt="Discovery" class="h-30 w-30 max-w-none -rotate-45 object-cover">
@@ -785,7 +788,7 @@
          </div>
 
          <!-- Bottom Text -->
-         <div class="mt-12 flex flex-wrap items-center justify-center gap-3 text-center text-sm
+         <div class="mt-12 flex proCard flex-wrap items-center justify-center gap-3 text-center text-sm
           text-peraColor md:text-base">
             <span>Trusted by</span>
             <span class="rounded-full bg-primaryColor px-8 py-1.5 text-white">120+</span>
@@ -796,7 +799,7 @@
    <!-- Our Process End -->
 
    <!-- Explore Section -->
-   <section class="relative isolate overflow-hidden font-Poppins">
+   <section class="relative isolate overflow-hidden font-Poppins expertise">
 
       <!-- Background image -->
       <img src="./image/explore1.png" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover" />
@@ -804,19 +807,19 @@
 
       <!-- ImageTopLeft -->
       <div
-         class="absolute left-4 top-4 hidden h-24 w-24 rotate-45 overflow-hidden rounded-md border-2 border-blue-500 sm:block lg:left-[15%] lg:h-28 lg:w-28">
+         class="absolute left-4 top-4 hidden h-24 w-24 image1 rotate-45 overflow-hidden rounded-md border-2 border-blue-500 sm:block lg:left-[15%] lg:h-28 lg:w-28">
          <img src="./image/Intersect.png" alt="Team working" class="h-full w-full -rotate-45 scale-150 object-cover" />
       </div>
 
       <!-- ImagebottomLeft -->
       <div
-         class="absolute bottom-7 hidden h-24 w-24 rotate-45 overflow-hidden rounded-md border-2 border-blue-500 sm:block lg:left-16">
+         class="absolute bottom-7 hidden image2 h-24 w-24 rotate-45 overflow-hidden rounded-md border-2 border-blue-500 sm:block lg:left-16">
          <img src="./image/explore3.png" alt="Developer typing"
             class="h-full w-full -rotate-45 scale-150 object-cover" />
       </div>
 
       <!-- Diamond image -->
-      <div class="absolute -right-10 top-1/2 hidden h-64 w-64 -translate-y-1/2 rotate-45 overflow-hidden rounded-xl
+      <div class="absolute -right-10 image3 top-1/2 hidden h-64 w-64 -translate-y-1/2 rotate-45 overflow-hidden rounded-xl
           border-2 border-blue-500 md:block lg:-right-4 lg:h-80 lg:w-80">
          <img src="./image/explore2.png" alt="Planning a project"
             class="h-full w-full -rotate-45 scale-150 object-cover" />
@@ -824,21 +827,23 @@
 
       <!-- Content -->
       <div class="mx-auto max-w-4xl px-6 py-20 text-center sm:py-28 lg:py-36">
-         <p class="text-peraFS font-medium tracking-[5px] text-primaryColor uppercase mb-3">
+         <p class="text-peraFS font-medium tracking-[5px] text-primaryColor uppercase mb-3 title">
             our expertise
          </p>
-         <h2 class="text-mobileheaderFS lg:text-primaryFS font-semibold leading-tight text-brandColor">
+         <h2 class="text-mobileheaderFS lg:text-primaryFS font-semibold leading-tight text-brandColor title">
             Creating high-performance websites that accelerate business growth
          </h2>
-         <p class="mt-6 leading-relaxed text-[#CCCCCC] text-peraFS lg:text-[20px]">
+         <p class="mt-6 leading-relaxed text-[#CCCCCC] text-peraFS lg:text-[20px] title">
             From corporate websites and custom web applications to eCommerce platforms
             and enterprise solutions, we deliver digital products designed to perform,
             convert, and scale with your business.
          </p>
-         <a href="#services"
-            class="inline-flex mt-8 items-center text-secondColor justify-center bg-primaryColor hover:bg-white hover:text-primaryColor transition-all duration-300 rounded-full px-7 py-3 text-sm font-medium">
-            Explore Services
-         </a>
+         <div class="btn title">
+            <a href="#services"
+               class="inline-flex mt-8 items-center text-secondColor justify-center bg-primaryColor hover:bg-white hover:text-primaryColor transition-all duration-300 rounded-full px-7 py-3 text-sm font-medium">
+               Explore Services
+            </a>
+         </div>
       </div>
    </section>
    <!-- Explore Section End -->
@@ -847,7 +852,7 @@
    <section class="relative isolate py-20 lg:py-40 overflow-hidden font-Poppins px-4 lg:px-0">
 
       <!-- Center glow effect -->
-      <div class="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2"
+      <div class="pointer-events-none absolute left-1/2 top-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 ctaAnimate"
          aria-hidden="true">
          <div class="relative flex h-60 w-60 items-center justify-center lg:h-100 lg:w-100">
 
@@ -865,18 +870,20 @@
       <!-- Content -->
       <div class="mx-auto max-w-3xl text-center">
 
-         <h2 class="text-mobileheaderFS font-semibold leading-tight text-brandColor lg:text-[65px]">
+         <h2 class="text-mobileheaderFS font-semibold leading-tight text-brandColor lg:text-[65px] ctaTitle">
             Let's Build Something special
          </h2>
-         <p class="mt-4 text-peraColor leading-relaxed text-peraFS lg:text-[18px]">
+         <p class="mt-4 text-peraColor leading-relaxed text-peraFS lg:text-[18px] ctaPera">
             Whether you're launching a new business, redesigning an existing website,
             or developing a custom web application, our team is ready to turn your
             ideas into exceptional digital experiences.
          </p>
-         <a href="#services"
-            class="inline-flex mt-8 items-center text-secondColor justify-center bg-primaryColor hover:bg-secondColor hover:text-primaryColor transition-all duration-300 rounded-full px-7 py-3 text-[15px] lg:text-btnFS font-medium">
-            Schedule a Consultation
-         </a>
+         <div class="btn animateBtn">
+            <a href="#services"
+               class="inline-flex mt-8 items-center text-secondColor justify-center bg-primaryColor hover:bg-secondColor hover:text-primaryColor transition-all duration-300 rounded-full px-7 py-3 text-[15px] lg:text-btnFS font-medium">
+               Schedule a Consultation
+            </a>
+         </div>
       </div>
    </section>
    <!-- cta Section End -->
@@ -886,7 +893,7 @@
       <div class="max-w-7xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
 
          <!-- Brand + Contact -->
-         <div class="max-w-lg">
+         <div class="max-w-lg fooAnimate">
             <img src="./image/footerLogo.png" alt="PlanCodeDeploy" class="object-cover">
             <p class="text-smallFS leading-relaxed mt-6 font-normal">
                Plan Code Deploy is a professional web development agency delivering modern websites,
@@ -921,7 +928,7 @@
          </div>
 
          <!-- The Company + legal -->
-         <div class="lg:pl-20 lg:mt-20">
+         <div class="lg:pl-20 lg:mt-20 fooAnimate">
             <h2 class="text-secondColor text-[20px] mb-5">The Company</h2>
             <ul class="space-y-2 text-sm font-normal">
                <li><a href="#" class="hover:text-primaryColor">Home</a></li>
@@ -936,7 +943,7 @@
             </ul>
          </div>
          <!-- Services -->
-         <div class="lg:mt-20 lg:pl-20">
+         <div class="lg:mt-20 lg:pl-20 fooAnimate">
             <h2 class="text-secondColor text-[20px] mb-5">Services</h2>
             <ul class="space-y-2 text-sm font-normal">
                <li><a href="#" class="hover:text-primaryColor">Web Development</a></li>
@@ -946,7 +953,7 @@
             </ul>
          </div>
          <!-- Payment Methods -->
-         <div class="lg:text-right flex flex-col justify-end">
+         <div class="lg:text-right flex flex-col justify-end fooAnimate">
             <h2 class="text-secondColor text-[20px] mb-4">Payment Methods</h2>
             <div class="flex items-center gap-3 lg:justify-end">
                <img src="./image/payments.png" alt="Payment methods">
@@ -954,7 +961,8 @@
          </div>
       </div>
       <hr class="mt-10 border-borderColor">
-      <h1 class="text-center mt-5 text-smallFS text-secondColor">© 2026 PlanCodeDeploy. All Rights Reserved.</h1>
+      <h1 class="text-center mt-5 text-smallFS copyRight text-secondColor">© 2026 PlanCodeDeploy. All Rights Reserved.
+      </h1>
    </footer>
    <!-- Footer Section End -->
 
