@@ -132,3 +132,47 @@ testimonialTL.from(".testimonial-nav", {
 }, "-=0.4");
 
 
+// Portfolios Animate
+
+gsap.from(".portfolioTitle", {
+   y: 200,
+   opacity: 0,
+   duration: 0.8,
+   stagger: 0.2,
+   ease: "power2.out",
+
+   scrollTrigger: {
+      trigger: ".portfolioTitle",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+   }
+});
+
+gsap.from('.Fimage', {
+   x: -350,
+   duration: 1,
+   scrollTrigger: {
+      trigger: ".portfolioTitle",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+   }
+})
+gsap.from('.Simage', {
+   y: 250,
+   scale: 0,
+   duration: 1.6,
+   scrollTrigger: {
+      trigger: ".portfolioTitle",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+   }
+})
+gsap.from('.Timage', {
+   y: 350,
+   duration: 1.8,
+   scrollTrigger: {
+      trigger: ".portfolioTitle",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+   }
+})
