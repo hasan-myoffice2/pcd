@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>PlanCodeDeoploy</title>
    <link rel="icon" type="image/png" href="./image/favicon.png">
-   <link rel="stylesheet" href="./src/output.css?v=1.2.3">
+   <link rel="stylesheet" href="./src/output.css?v=0.1.1">
    <!-- Swipper JS CDN Link -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
    <!-- FontAwesome Icon CDN -->
@@ -87,10 +87,6 @@
 
    <!-- Hero Section -->
    <section class="relative min-h-screen flex items-center overflow-hidden font-Poppins">
-      <!-- Background Image -->
-      <img class="absolute w-200 right-0 bottom-0 object-cover" src="./image/newHero.png" alt="Hero Background">
-      <!-- Dark Overlay -->
-      <div class="absolute inset-0 bg-black/50"></div>
       <!-- Hero Content -->
       <div class="relative z-10 max-w-7xl mx-auto w-full px-5 lg:px-0 py-32 font-Poppins">
          <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
@@ -118,11 +114,11 @@
                <div id="heroTitle" class="lg:mt-16 mt-14 space-y-3">
                   <a href="tel:+0881645645246"
                      class="flex items-center gap-3 text-sm hover:text-primaryColor transition-all">
-                     <i class="fa-solid fa-phone"></i>
-                     <span>01973-236796</span>
+                     <!-- <i class="fa-solid fa-phone"></i>
+                     <span>01973-236796</span> -->
                   </a>
                   <a href="mailto:PlanCodeDeploy@gmail.com"
-                     class="flex items-center gap-3 text-sm hover:text-primaryColor transition-all">
+                     class="flex lg:mt-20 mt-10 items-center gap-3 text-sm hover:text-primaryColor transition-all">
                      <i class="fa-regular fa-envelope"></i>
                      <span>info@plancodedeploy.com</span>
                   </a>
@@ -130,24 +126,8 @@
             </div>
 
             <!-- Right Floating Cards -->
-            <div class="relative w-full max-w-[320px] h-70 mx-auto mt-8 lg:mt-0 lg:block hidden me-0">
-               <!-- Card 1 -->
-               <div id="box1" class="absolute flex items-center justify-center top-0 left-1/2 -translate-x-1/2 
-               w-36 h-36 rounded-xl border-2 border-primaryColor backdrop-blur-smflex
-                 justify-centertext-4xl">
-                  <img class="w-16" src="./image/mingcute_ai-line.png" alt="mingcuteImage">
-               </div>
-               <!-- Card 2 -->
-               <div id="box2" class="absolute -left-6 top-46 -translate-y-1/2 w-36 h-36 rounded-xl border-2
-                border-primaryColor flex items-center justify-center text-4xl">
-                  <img class="w-16" src="./image/fluent_design-ideas-32-filled.png" alt="fluentDesign">
-               </div>
-               <!-- Card 3 -->
-               <div id="box3" class="absolute left-37 -bottom-9 w-36 h-36 rounded-xl border-2 border-primaryColor
-                  flex items-center justify-center text-4xl">
-                  <img class="w-12" src="./image/streamline-ultimate_coding-apps-website-apps-browser-bold.png"
-                     alt="fluentDesign">
-               </div>
+            <div class="flex justify-end w-full heroImage">
+               <img class="object-cover object-right" src="./image/brandHero.png" alt="Hero Background">
             </div>
          </div>
       </div>
@@ -169,7 +149,7 @@
             <div class="text-primaryColor uppercase tracking-[6px] font-medium trigger1">About Company</div>
             <h2 class="lg:text-primaryFS trigger text-mobileheaderFS lg:leading-12 mt-5 mb-8 max-w-2xl mx-auto
                 text-brandColor trigger2"> We create modern websites and scalable digital solutions</h2>
-            <p class="max-w-4xl trigger3 mx-auto leading-7.5 text-peraColor">Your website is more than an online
+            <p class="max-w-4xl mx-auto leading-7.5 text-peraColor trigger3">Your website is more than an online
                presence—it is your most valuable digital
                asset. At PlanCodeDeploy, we build custom websites, business platforms, and web applications that
                combine exceptional design with reliable technology. Every project is developed with performance,
